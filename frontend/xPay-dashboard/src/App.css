@@ -1,0 +1,540 @@
+/* ===============================
+   Color Tokens
+=============================== */
+:root {
+  --bg-very-light: #F7E6EC;
+  --bg-light-section: #E7B9C9;
+  --accent-soft: #D68DA6;
+  --primary: #871F42;
+  --accent-dark: #5E1530;
+  --text-very-dark: #2C0714;
+
+  --page-bg: #F5F5F7;
+  --card-bg: #FFFFFF;
+  --border-neutral: #DFDFE3;
+
+  --text-body: #222229;
+  --text-muted: #6A6A73;
+
+  --gold-soft: #D4A637;
+  --teal-muted: #1E7D76;
+  --success: #2E8B57;
+  --warning: #D9822B;
+}
+
+/* ===============================
+   Global
+=============================== */
+body {
+  background-color: var(--page-bg);
+  font-family: "Inter", sans-serif;
+  color: var(--text-body);
+}
+
+.handwritten {
+  font-family: "Pacifico", cursive;
+  color: var(--accent-dark);
+}
+
+.heading-dark {
+  color: var(--accent-dark);
+}
+
+/* ===============================
+   Header
+=============================== */
+.top-bar {
+  background-color: var(--primary);
+  height: 56px;
+}
+
+.header-logo {
+  height: 28px;
+  object-fit: contain;
+}
+.lang-button,
+.menu-button {
+  background-color: var(--primary);
+  color: var(--bg-very-light);
+  border: 1px solid var(--accent-soft);
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.lang-button:hover,
+.menu-button:hover {
+  background-color: var(--accent-dark);
+  box-shadow: 0 4px 10px rgba(214, 141, 166, 0.5);
+}
+
+/* Hamburger */
+.menu-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--bg-very-light);
+  margin: 3px 0;
+}
+
+/* ===============================
+   Main Wrapper
+=============================== */
+.main-wrapper {
+  background-color: var(--bg-very-light);
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+}
+.brand-hero {
+  padding: 32px 0;
+}
+
+.hero-logo {
+  height: 140%;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+/* ===============================
+   Cards
+=============================== */
+.dashboard-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-soft);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.2s ease;
+}
+
+.dashboard-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(135, 31, 66, 0.15);
+}
+
+/* ===============================
+   Buttons
+=============================== */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ALWAYS 3 buttons in one row */
+  gap: 8px;
+  width: 100%;
+}
+.action-button {
+  background-color: var(--primary);
+  color: var(--bg-very-light);
+  border: 1px solid var(--accent-soft);
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  transition: all 0.2s ease;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button:hover {
+  background-color: var(--accent-dark);
+  box-shadow: 0 6px 16px rgba(214, 141, 166, 0.5);
+}
+
+.action-button {
+  height: 48px; /* same height for all */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-button {
+  background-color: var(--primary);
+  color: var(--bg-very-light);
+  border: 1px solid var(--accent-soft);
+  border-radius: 14px;
+  padding: 14px;
+  width: 100%;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  height: 48px;
+  width: 100%; /* spans full grid width */
+}
+
+.history-button:hover {
+  background-color: var(--accent-dark);
+  box-shadow: 0 6px 16px rgba(214, 141, 166, 0.5);
+}
+
+/* ===============================
+   Footer
+=============================== */
+
+.signature {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.app-footer {
+  background-color: var(--bg-very-light);
+  border-top: 1px solid var(--accent-soft);
+  padding: 10px 0;
+}
+
+.footer-logo {
+  height: 36px;
+  object-fit: contain;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--teal-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-dark);
+}
+
+/* ===============================
+   Mobile Tweaks
+=============================== */
+@media (max-width: 576px) {
+  .hero-logo {
+    height: 100px;
+  }
+  .main-wrapper {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  h1.handwritten {
+    font-size: 2rem;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .action-button {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .history-button {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  .top-bar {
+    height: 52px;
+  }
+  .action-button,
+  .history-button {
+    height: 44px;
+    font-size: 0.85rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .app-footer {
+    padding: 6px 0;
+  }
+
+  .footer-logo {
+    height: 20px;
+  }
+
+  .footer-text {
+    font-size: 0.68rem;
+    line-height: 1.1;
+  }
+
+  .footer-links {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-text {
+    font-size: 0.65rem;
+  }
+}
+
+
+/* =====================================
+   TABLET (iPads)
+===================================== */
+@media (min-width: 577px) and (max-width: 768px) {
+  .hero-logo { /*Standalone Hero Logo*/
+    height: 120px;
+  }
+  .main-wrapper {
+    max-width: 520px;
+    padding: 28px;
+  }
+
+  h1.handwritten {
+    font-size: 2.4rem;
+  }
+
+  .dashboard-card {
+    padding: 24px;
+  }
+
+  .action-button,
+  .history-button {
+    height: 48px;
+    font-size: 0.9rem;
+  }
+  
+  .app-footer {
+    padding: 10px 0;
+  }
+
+  .footer-logo {
+    height: 24px;
+  }
+
+  .footer-text {
+    font-size: 0.72rem;
+  }
+}
+
+/* =====================================
+   LAPTOP (small desktops)
+===================================== */
+@media (min-width: 769px) and (max-width: 992px) {
+  .main-wrapper {
+    max-width: 600px;
+  }
+
+  h1.handwritten {
+    font-size: 2.6rem;
+  }
+}
+
+/* =====================================
+   DESKTOP (large screens)
+===================================== */
+@media (min-width: 1200px) {
+  .main-wrapper {
+    max-width: 700px;
+    padding: 36px;
+  }
+
+  h1.handwritten {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .top-bar .handwritten {
+    font-size: 0.8rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .action-button,
+  .history-button {
+    height: 52px;
+    font-size: 1rem;
+  }
+}
+
+/* ===============================
+   Login Page Layout
+=============================== */
+.login-page {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* ===============================
+   Login Logo
+=============================== */
+.login-logo img {
+  height: 90px;
+  margin-bottom: 24px;
+  object-fit: contain;
+}
+
+/* ===============================
+   Login Card
+=============================== */
+.login-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-soft);
+  border-radius: 18px;
+  padding: 28px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 20px rgba(135, 31, 66, 0.12);
+}
+
+/* ===============================
+   Titles
+=============================== */
+.login-title {
+  color: var(--accent-dark);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   Labels
+=============================== */
+.login-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* ===============================
+   Inputs
+=============================== */
+.login-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-neutral);
+  font-size: 0.85rem;
+  color: var(--text-body);
+  background-color: #fff;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ===============================
+   Login Button
+=============================== */
+.login-button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--bg-very-light);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: var(--accent-dark);
+}
+
+/* ===============================
+   Error Message
+=============================== */
+.login-error {
+  font-size: 0.75rem;
+  color: var(--warning);
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   Links
+=============================== */
+.login-links {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.login-links a {
+  font-size: 0.75rem;
+  color: var(--teal-muted);
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Responsive Tweaks
+=============================== */
+@media (max-width: 576px) {
+  .login-logo img {
+    height: 70px;
+  }
+
+  .login-card {
+    padding: 22px;
+  }
+
+  .login-title {
+    font-size: 1.1rem;
+  }
+}
+/* ===============================
+   Profile Page
+=============================== */
+
+.profile-page {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-soft);
+  border-radius: 18px;
+  padding: 28px;
+  max-width: 320px;
+  margin: 60px auto;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(135, 31, 66, 0.12);
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.profile-name {
+  margin: 0;
+  color: var(--accent-dark);
+}
+
+.profile-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
